@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdqmyYAgnXGR_LhGb0cgtNgi8Zlzsl-vMcFEu8wMEs_Xzm16qS7oYrHIycYl4Bo2aGObc&usqp=CAU"
-    <title>Color picer by G</title>
+    <title>Color picker by G</title>
     <style>
         *{
             margin: 0;
@@ -43,7 +42,7 @@
            gap: 20px;
         }
         .box{
-            height: 20vh;
+            height: 22vh;
             width: 20vw;
             background-color: white;
             border-radius: 20px;
@@ -79,6 +78,10 @@
             width: 25vw;
         }
         }
+        #click:hover{
+            background-color: rgb(43, 43, 43);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -96,8 +99,9 @@
             <button style="background-color: red;" id="red">Red</button>
             <button style="background-color: deeppink;" id="deeppink">Deeppink</button>
         </div>
-        <div style="display: flex; justify-content: center; align-items: center; font-weight: 600;">
-            This is a dynamic Color picker:<input type="color" id="input" style="cursor:pointer;"><p id="text"></p>
+        <div style="display: flex; justify-content: center; align-items: center; font-weight: 600; gap: 5px;">
+            Choose yoour color<input type="color" id="input" style="cursor:pointer;">
+            then <button id="click">Click me</button> to apply
         </div>
         </div>
         <div class="middle">
@@ -127,7 +131,7 @@
        let c6=document.querySelector('#orange');
        let c7=document.querySelector('#red');
        let c8=document.querySelector('#deeppink');
-       let d=document.querySelector('#input');
+       let d=document.querySelector('#click');
        let r=document.querySelector('#reset');
 
                                     // Reset
