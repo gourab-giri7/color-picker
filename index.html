@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            padding: 10px;
+            gap: 10px;
+        }
+        .top{
+            width: 100%;
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            gap: 5px;
+        }
+        .middle{
+            width: 100%;
+            height: 100vh;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-evenly;
+           gap: 20px;
+        }
+        .box{
+            height: 22vh;
+            width: 20vw;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .buttons{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+        button{
+            height: 5vh;
+            width: 5vw;
+            border: 1px solid black;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        /* for phones */
+        @media(max-width:480px){
+
+            button{
+            height: 5vh;
+            width: 20vw;
+        }
+        .box{
+            height: 15vh;
+            width: 25vw;
+        }
+        }
+    </style>
+</head>
+<body>
+        <div class="top">
+            <div style="display: flex; justify-content:center; align-items: center; gap: 20px; font-size: large;">
+                <h1>Pick a color</h1> <i class="fa-solid fa-arrows-rotate" style="cursor: pointer;" id="reset"></i>
+            </div>
+        <div class="buttons">
+            <button style="background-color: violet;" id="violet">Violet</button>
+            <button style="background-color: blue;" id="blue">Blue</button>
+            <button style="background-color: skyblue;" id="skyblue">Sky</button>
+            <button style="background-color: green;" id="green">Green</button>
+            <button style="background-color: yellow;" id="yellow">Yellow</button>
+            <button style="background-color: orange;" id="orange">Orange</button>
+            <button style="background-color: red;" id="red">Red</button>
+            <button style="background-color: deeppink;" id="deeppink">Deeppink</button>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; font-weight: 600;">
+            This is a dynamic Color picker:<input type="color" id="input" style="cursor:pointer;"><p id="text"></p>
+        </div>
+        </div>
+        <div class="middle">
+            <div class="box"id="box1">Apply Color</div>
+            <div class="box"id="box2">Apply Color</div>
+            <div class="box"id="box3">Apply Color</div>
+            <div class="box"id="box4">Apply Color</div>
+            <div class="box"id="box5">Apply Color</div>
+            <div class="box"id="box6">Apply Color</div>
+            <div class="box"id="box7">Apply Color</div>
+            <div class="box"id="box8">Apply Color</div>
+            <div class="box"id="box9">Apply Color</div>
+            <div class="box"id="box10">Apply Color</div>
+            <div class="box"id="box11">Apply Color</div>
+            <div class="box"id="box12">Apply Color</div>
+        </div>
+
+
+
+
+<script>
+       let c1=document.querySelector('#violet');
+       let c2=document.querySelector('#blue');
+       let c3=document.querySelector('#skyblue');
+       let c4=document.querySelector('#green');
+       let c5=document.querySelector('#yellow');
+       let c6=document.querySelector('#orange');
+       let c7=document.querySelector('#red');
+       let c8=document.querySelector('#deeppink');
+       let d=document.querySelector('#input');
+       let r=document.querySelector('#reset');
+
+                                    // Reset
+
+r.addEventListener("click",function(){
+    let box =document.querySelectorAll(".box");
+    for(let i=0;i<=box.length;i++){
+        box[i].style.backgroundColor="white";
+    }
+})
+                                    // Dynamic color
+d.addEventListener("click",function(){
+    let box =document.querySelectorAll(".box");
+    let dc=document.querySelector('#input').value;
+            box[0].addEventListener("click",function(){
+            box[0].style.backgroundColor=dc;
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.backgroundColor=dc;
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.backgroundColor=dc;
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.backgroundColor=dc;
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.backgroundColor=dc;
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.backgroundColor=dc;
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.backgroundColor=dc;
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.backgroundColor=dc;
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.backgroundColor=dc;
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.backgroundColor=dc;
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.backgroundColor=dc;
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.backgroundColor=dc;
+             
+            })
+
+})
+                        // Colors
+c1.addEventListener("click",function(){
+    let box =document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:violet";
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:violet";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:violet";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:violet";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:violet";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:violet";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:violet";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:violet";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:violet";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:violet";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:violet";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:violet";
+             
+            })
+         })
+
+          c2.addEventListener("click",function(){
+        let box=document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:blue";
+             
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:blue";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:blue";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:blue";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:blue";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:blue";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:blue";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:blue";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:blue";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:blue";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:blue";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:blue";
+             
+            })
+         })
+ c3.addEventListener("click",function(){
+       let box=document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:skyblue";
+             
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:skyblue";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:skyblue";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:skyblue";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:skyblue";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:skyblue";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:skyblue";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:skyblue";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:skyblue";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:skyblue";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:skyblue";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:skyblue";
+             
+            })
+         })
+ c4.addEventListener("click",function(){
+        let box=document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:green";
+             
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:green";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:green";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:green";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:green";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:green";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:green";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:green";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:green";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:green";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:green";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:green";
+             
+            })
+         })
+ c5.addEventListener("click",function(){
+        let box=document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:yellow";
+             
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:yellow";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:yellow";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:yellow";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:yellow";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:yellow";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:yellow";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:yellow";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:yellow";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:yellow";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:yellow";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:yellow";
+             
+            })
+         })
+ c6.addEventListener("click",function(){
+        let box=document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:orange";
+             
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:orange";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:orange";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:orange";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:orange";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:orange";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:orange";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:orange";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:orange";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:orange";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:orange";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:orange";
+             
+            })
+         })
+ c7.addEventListener("click",function(){
+        let box=document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:red";
+             
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:red";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:red";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:red";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:red";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:red";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:red";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:red";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:red";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:red";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:red";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:red";
+             
+            })
+         })
+ c8.addEventListener("click",function(){
+        let box=document.querySelectorAll(".box");
+            box[0].addEventListener("click",function(){
+            box[0].style.cssText="background-color:deeppink";
+             
+            })
+            box[1].addEventListener("click",function(){
+            box[1].style.cssText="background-color:deeppink";
+             
+            })
+            box[2].addEventListener("click",function(){
+            box[2].style.cssText="background-color:deeppink";
+             
+            })
+            box[3].addEventListener("click",function(){
+            box[3].style.cssText="background-color:deeppink";
+             
+            })
+            box[4].addEventListener("click",function(){
+            box[4].style.cssText="background-color:deeppink";
+             
+            })
+            box[5].addEventListener("click",function(){
+            box[5].style.cssText="background-color:deeppink";
+             
+            })
+            box[6].addEventListener("click",function(){
+            box[6].style.cssText="background-color:deeppink";
+             
+            })
+            box[7].addEventListener("click",function(){
+            box[7].style.cssText="background-color:deeppink";
+             
+            })
+            box[8].addEventListener("click",function(){
+            box[8].style.cssText="background-color:deeppink";
+             
+            })
+            box[9].addEventListener("click",function(){
+            box[9].style.cssText="background-color:deeppink";
+             
+            })
+            box[10].addEventListener("click",function(){
+            box[10].style.cssText="background-color:deeppink";
+             
+            })
+            box[11].addEventListener("click",function(){
+            box[11].style.cssText="background-color:deeppink";
+             
+            })
+         })
+    </script>
+</body>
+</html>
